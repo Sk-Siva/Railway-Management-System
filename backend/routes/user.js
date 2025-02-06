@@ -5,7 +5,7 @@ const { registerUser, loginUser} = require('../controllers/userController');
 //Route for user Registration
 router.post('/register', registerUser);
 
-// Route for user login
+//Route for user login
 router.post('/login', loginUser);
 
 module.exports = router;
