@@ -1,4 +1,4 @@
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const pool = require('../config/db'); // Ensure this points to your MySQL connection
 const User = require('../models'); // Ensure this is correctly defined
