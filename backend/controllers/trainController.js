@@ -7,15 +7,15 @@ exports.addTrain = async (req, res) => {
     const { train_name, source, destination, total_seats ,available_seats} = req.body;
 
     try {
-        // Add error handling and logging
+
         await pool.query(
             'INSERT INTO trains (trainName, source, destination, totalSeats, availableSeats) VALUES (?, ?, ?, ?, ?)',
             [train_name, source, destination, total_seats, available_seats]
         );
         res.status(201).json({ message: 'Train added successfully!' });
     } catch (error) {
-        console.error('Error adding train:', error); // Log the error to the console
-        res.status(500).json({ message: 'An error occurred while adding the train.' }); // Send a 500 response with an error message
+        console.error('Error adding train:', error);
+        res.status(500).json({ message: 'An error occurred while adding the train.' });
     }
 };
 
