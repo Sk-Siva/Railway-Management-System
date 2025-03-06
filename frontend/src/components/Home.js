@@ -4,11 +4,9 @@ import TrainList from './TrainList';
 import { useNavigate } from 'react-router-dom';
 import "./Styles.css"
 
-import Header from "./Header"
+import Header from "./Header";
 
-const Home = () => {
-
-    
+const Home = () => { 
     const navigate = useNavigate();
     const token = localStorage.getItem("token")
     if (token === null){
